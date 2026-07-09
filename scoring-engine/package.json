@@ -1,0 +1,37 @@
+{
+  "name": "@veriterra/scoring-engine",
+  "version": "1.0.0",
+  "description": "Deterministic dietary supplement scoring engine — the core IP of Veriterra.AI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "supplement",
+    "scoring",
+    "veriterra",
+    "nutrition",
+    "deterministic"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}
