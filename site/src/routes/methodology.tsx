@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "./__root";
+import { SCORING_METHODOLOGY_VERSION } from "@veriterra/scoring-engine";
 
 export const Route = createFileRoute("/methodology")({
   component: MethodologyPage,
@@ -99,7 +100,7 @@ function MethodologyPage() {
         {/* Header */}
         <div className="mb-10">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-            Scoring Methodology v1.0
+            Scoring Methodology {SCORING_METHODOLOGY_VERSION}
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
             Every score on Veriterra.AI is computed by a deterministic, immutable engine.
@@ -108,7 +109,7 @@ function MethodologyPage() {
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-1 rounded-full border border-verde-200 bg-verde-50 px-3 py-1 text-xs font-medium text-verde-700 dark:border-verde-800 dark:bg-verde-950 dark:text-verde-300">
-              Methodology v1.0.0
+              Methodology {SCORING_METHODOLOGY_VERSION}
             </span>
             <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
               Immutable &amp; Auditable
@@ -250,7 +251,7 @@ function MethodologyPage() {
         {/* Footer note */}
         <div className="mt-10 text-center text-xs text-slate-400">
           <p>
-            Methodology v1.0.0 &bull; Published on first use &bull; Next update: methodology review before v2.0
+            Methodology {SCORING_METHODOLOGY_VERSION} &bull; Published on first use &bull; Next update: methodology review before v2.0
           </p>
         </div>
       </div>

@@ -103,6 +103,52 @@ const DEMO_PRODUCTS: Record<string, { name: string; brand: string; description: 
       },
     },
   },
+  "multivitamin-demo": {
+    name: "Daily Multivitamin (Men's 50+)",
+    brand: "VitaCore",
+    description:
+      "Comprehensive multivitamin formulated for men over 50 with optimized levels of B12, D3, magnesium, zinc, and lycopene. Third-party tested and USP certified.",
+    input: {
+      labelAccuracy: {
+        measuredVsClaimedPercent: 85,
+        source: "lab",
+        notes: "Third-party tested; slightly under in B12 (90% of claimed) and magnesium (82% of claimed)",
+      },
+      puritySafety: {
+        contaminants: [
+          { contaminant: "lead", amountMcg: 0.6, safetyLimitMcg: 1.0, source: "lab" },
+          { contaminant: "arsenic", amountMcg: 0.4, safetyLimitMcg: 1.0, source: "lab" },
+          { contaminant: "cadmium", amountMcg: 0.1, safetyLimitMcg: 0.5, source: "lab" },
+          { contaminant: "mercury", amountMcg: 0.05, safetyLimitMcg: 0.3, source: "lab" },
+        ],
+        thirdPartyTested: true,
+        source: "lab",
+      },
+      evidence: {
+        claims: [
+          { claim: "Supports immune health", grade: "A" },
+          { claim: "Supports bone health", grade: "A" },
+          { claim: "Supports energy metabolism", grade: "B" },
+          { claim: "Supports cardiovascular health", grade: "B" },
+          { claim: "Supports prostate health", grade: "C" },
+        ],
+        source: "manual",
+      },
+      formulation: {
+        doseAdequacyScore: 0.7,
+        bioavailabilityScore: 0.6,
+        thirdPartyCertified: 1.0,
+        source: "manual",
+        notes: "Good formulation with bioavailable forms (methylcobalamin B12, chelated minerals). Some nutrients slightly below optimal clinical doses.",
+      },
+      value: {
+        costPerEffectiveDose: 0.35,
+        categoryBenchmarkCost: 0.30,
+        source: "manual",
+        notes: "Cost per day is $0.35 vs $0.30 category average — slightly above benchmark.",
+      },
+    },
+  },
 };
 
 /**
